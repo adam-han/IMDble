@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #121213;
+    --card-bg: #272729;
+    --text-color: #ffffff;
+    --accent: #f5c518; /* IMDb Yellow */
+    --border: #3a3a3c;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: var(--accent);
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+#stats-line {
+    font-size: 1.1rem;
+    height: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.clue-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.clue-box {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border);
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.5s ease;
+}
+
+.revealed {
+    border-color: var(--accent);
+    background-color: #313133;
+    transform: scale(1.02);
+}
+
+.input-area {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 4px;
+    border: 2px solid var(--border);
+    background: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+button {
+    padding: 0 25px;
+    background-color: var(--accent);
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 1.5rem;
+}
+
+#restart-btn {
+    margin-top: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 30px;
+}
+
+.hidden { display: none; }
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}

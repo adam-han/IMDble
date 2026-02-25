@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDble - Movie Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h1>IMDble</h1>
+        <p id="stats-line">Guess the movie! 7 tries remaining.</p>
+
+        <div class="clue-container">
+            <div id="clue-year" class="clue-box">Year: ???</div>
+            <div id="clue-genre" class="clue-box">Genre: ???</div>
+            <div id="clue-director" class="clue-box">Director: ???</div>
+            <div id="clue-actors" class="clue-box">Actors: ???</div>
+            <div id="clue-imdbrating" class="clue-box">IMDb Rating: ???</div>
+            <div id="clue-plot" class="clue-box">Plot: ???</div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="guess-input" list="movie-options" placeholder="Type movie title..." autocomplete="off">
+            <datalist id="movie-options"></datalist>
+            <button id="guess-btn">GUESS</button>
+        </div>
+
+        <p id="message"></p>
+        <button id="restart-btn" class="hidden">PLAY AGAIN</button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
